@@ -5,7 +5,7 @@ import { v4 as uuid } from "uuid";
 import { format } from "timeago.js";
 function App() {
   const scrollRef = useRef();
-  const socket = io("http://localhost:3001");
+  const socket = io("https://chat-mini-web-service.onrender.com");
   const [message, setMessage] = useState("");
   const [id, setId] = useState(uuid());
   const [isMessage, setIsMessage] = useState(false);
