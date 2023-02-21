@@ -10,7 +10,7 @@ const port = process.env.PORT || 9000;
 
 const io = new Server(server, {
   cors: {
-    origin: "https://mini-chat-app.onrender.com",
+    origin: "https://mini-chat-app-i8hx.onrender.com/",
     method: ["GET", "POST"],
   },
 });
