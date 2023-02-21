@@ -25,6 +25,6 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello world</h1>");
 });
 
-server.listen(3001, () => {
+server.listen(process.env.PORT || 3001, () => {
   console.log("Server running on port 3001");
 });
