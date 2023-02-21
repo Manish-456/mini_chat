@@ -6,6 +6,8 @@ const http = require("http");
 app.use(cors());
 const server = http.createServer(app);
 
+const port = process.env.PORT || 9000;
+
 const io = new Server(server, {
   cors: {
     origin: "https://mini-chat-app.onrender.com",
@@ -25,6 +27,6 @@ app.get("/", (req, res) => {
   res.send("<h1>Hello world</h1>");
 });
 
-server.listen(process.env.PORT || 3001, () => {
-  console.log("Server running on port 3001");
+server.listen(port, () => {
+  console.log("Server running on port ", port);
 });
